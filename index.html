@@ -73,18 +73,22 @@ nav a::after{content:'';position:absolute;left:0;bottom:-5px;width:0;height:2px;
 nav a:hover{color:var(--neon)}nav a:hover::after{width:100%}
 #hamb{display:none;color:var(--neon);font-size:1.4rem;cursor:pointer;background:none;border:none}
 /* ===== HERO ===== */
+
 section{position:relative;z-index:3;padding:110px 6vw}
 .hero{min-height:100vh;display:flex;align-items:center;justify-content:space-between;gap:44px;flex-wrap:wrap}
 .hero-text{max-width:640px}
-.hero-text>*{opacity:0;animation:slidein .9s cubic-bezier(.22,1,.36,1) forwards}
+.hero-text>*{opacity:1;animation:slidein .9s cubic-bezier(.22,1,.36,1) forwards}
 .hero-text>*:nth-child(1){animation-delay:.15s}.hero-text>*:nth-child(2){animation-delay:.3s}
 .hero-text>*:nth-child(3){animation-delay:.45s}.hero-text>*:nth-child(4){animation-delay:.6s}
 .hero-text>*:nth-child(5){animation-delay:.75s}.hero-text>*:nth-child(6){animation-delay:.9s}
 .hero-text>*:nth-child(7){animation-delay:1.05s}.hero-text>*:nth-child(8){animation-delay:1.2s}
 @keyframes slidein{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
 .tagline{color:var(--neon2);letter-spacing:4px;font-size:.85rem;margin-bottom:14px}
-.bigname2{font-family:'Orbitron';font-size:clamp(2.2rem,6vw,4rem);font-weight:900;color:#fff;letter-spacing:3px;text-shadow:0 0 18px rgba(0,255,156,.55),0 0 55px rgba(0,255,156,.25);animation:namepulse 3s ease-in-out infinite;position:relative;overflow:hidden}
-.bigname2::after{content:'';position:absolute;top:0;left:-80%;width:60%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.22),transparent);animation:shimmer 4s ease-in-out infinite}
+.bigname2{font-family:'Orbitron';font-size:clamp(2.2rem,6vw,4rem);font-weight:900;color:#fff;letter-spacing:3px;text-shadow:0 0 18px rgba(0,255,156,.55),0 0 55px rgba(0,255,156,.25);animation:namepulse 3s ease-in-out infinite;position:relative;overflow:visible}
+.bigname2::after{content:none}
+
+
+
 @keyframes shimmer{0%{left:-80%}55%,100%{left:130%}}
 .typeline{color:var(--neon);font-size:1.15rem;margin:18px 0;min-height:1.7em}
 .cursor{animation:blink .8s infinite}@keyframes blink{50%{opacity:0}}
